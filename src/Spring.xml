@@ -3,7 +3,56 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
            http://www.springframework.org/schema/beans/spring-beans.xsd">
+           
            <bean id="triangle" class="com.spring.practise.Triangle">
-           <property name="type" value="Equivalent"></property>
+           		<property name="type" value="Equivalent"></property>
+           </bean> 
+           
+           <bean id="triangleObjects" class="com.spring.practise.Objects.Triangle">
+           		<property name="pointA"  ref="pointA" />
+           		<property name="pointB"  ref="pointB" />
+           		<property name="pointC">
+           			<bean id="pointC" class="com.spring.practise.Objects.Point">
+		           		<property name="x" value="20" />
+		           		<property name="y" value="0" />
+		           </bean>
+           		</property>
            </bean>
+           
+           <bean id="pointA" class="com.spring.practise.Objects.Point">
+           		<property name="x" value="0" />
+           		<property name="y" value="0" />
+           </bean>
+           <bean id="pointB" class="com.spring.practise.Objects.Point">
+           		<property name="x" value="0" />
+           		<property name="y" value="20" />
+           </bean>
+           <!-- <bean id="pointC" class="com.spring.practise.Objects.Point">
+           		<property name="x" value="20" />
+           		<property name="y" value="0" />
+           </bean> -->
+           
+           <bean id="triangleCollections" class="com.spring.practise.Collections.Triangle">
+           		<property name="points">
+           			<list>
+           				<ref bean="point1" />
+           				<ref bean="point2" />
+           				<ref bean="point3" />
+           			</list>
+           		</property>
+           </bean> 
+           
+           <bean id="point1" class="com.spring.practise.Collections.Point">
+           		<property name="x" value="0" />
+           		<property name="y" value="0" />
+           </bean>
+           <bean id="point2" class="com.spring.practise.Collections.Point">
+           		<property name="x" value="0" />
+           		<property name="y" value="20" />
+           </bean>
+           <bean id="point3" class="com.spring.practise.Collections.Point">
+           		<property name="x" value="20" />
+           		<property name="y" value="0" />
+           </bean>
+           
 </beans>
