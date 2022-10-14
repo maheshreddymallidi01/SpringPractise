@@ -55,4 +55,23 @@
            		<property name="y" value="0" />
            </bean>
            
+           <bean id="triangleInitDefault" class="com.spring.practise.InitDefault.Triangle">
+           		<property name="pointid1"  ref="pointid1" />
+           		<property name="pointid2"  ref="pointid2" />
+           		<property name="pointid3" ref="pointid3" />
+           </bean>
+           
+           <bean id="pointid1" class="com.spring.practise.InitDefault.Point">
+           		<property name="x" value="0" />
+           		<property name="y" value="0" />
+           </bean>
+           <bean id="pointid2" class="com.spring.practise.InitDefault.Point">
+           		<property name="x" value="0" />
+           		<property name="y" value="20" />
+           </bean>
+           <bean id="pointid3" class="com.spring.practise.InitDefault.Point">
+           		<property name="x" value="20" />
+           		<property name="y" value="0" />
+           </bean>
+           
 </beans>
