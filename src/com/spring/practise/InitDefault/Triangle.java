@@ -39,14 +39,14 @@ public class Triangle implements InitializingBean, DisposableBean {
 	}
 
 	@Override
-	public void destroy() throws Exception {
-		System.out.println("Initialization Method");
+	public void afterPropertiesSet() throws Exception {
+		System.out.println("Initialization method");
 
 	}
-
+	
 	@Override
-	public void afterPropertiesSet() throws Exception {
-		System.out.println("Destroy method");
+	public void destroy() throws Exception {
+		System.out.println("Destroy Method");
 
 	}
 

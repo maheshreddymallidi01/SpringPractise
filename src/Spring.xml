@@ -2,8 +2,10 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
-           http://www.springframework.org/schema/beans/spring-beans.xsd">
-           
+           http://www.springframework.org/schema/beans/spring-beans.xsd"
+       xmlns:context="http//www.springframework.org/schema/context">
+       
+         
            <bean id="triangle" class="com.spring.practise.Triangle">
            		<property name="type" value="Equivalent"></property>
            </bean> 
@@ -73,5 +75,10 @@
            		<property name="x" value="20" />
            		<property name="y" value="0" />
            </bean>
+           
+           
+           <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor">
+           </bean>
+           
            
 </beans>
